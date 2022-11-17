@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022 Colin Walters.  All rights reserved.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:installLocation="preferExternal">
+
+    <uses-feature
+        android:name="android.hardware.screen.portrait"
+        android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true"/>
+
+    <!-- Needed for SensorManager.SENSOR_DELAY_FASTEST -->
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity
+            android:name="com.myapp.controller.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.myapp.controller.GameActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.myapp.controller.HelpActivity"
+            android:label="@string/help"/>
+
+        <service android:name="com.myapp.controller.AudioFocusService"/>
+
+        <receiver
+            android:name="com.myapp.controller.SoundBroadcastReceiver"
+            android:exported="false">
+
+            <!--
+                 don't use this - use Context.registerReceiver() <intent-filter> <action
+                android:name="android.media.AUDIO_BECOMING_NOISY" /> </intent-filter>
+            -->
+        </receiver>
+
+        <activity
+            android:name="com.myapp.controller.AboutActivity"
+            android:label="@string/about"/>
+
+        <activity
+            android:name="com.myapp.controller.HighScoreActivity"
+            android:label="@string/high_score"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--   ~ Copyright (c) 2022 Colin Walters.  All rights reserved. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.com.myapp"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="33" />
+
+    <uses-feature
+        android:name="android.hardware.screen.portrait"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+
+    <!-- Needed for SensorManager.SENSOR_DELAY_FASTEST -->
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+
+    <permission
+        android:name="com.com.myapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.com.myapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:testOnly="true"
+        android:theme="@style/AppTheme.NoActionBar" >
+        <activity
+            android:name="com.myapp.controller.MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.myapp.controller.GameActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myapp.controller.HelpActivity"
+            android:label="@string/help" />
+
+        <service android:name="com.myapp.controller.AudioFocusService" />
+
+        <receiver
+            android:name="com.myapp.controller.SoundBroadcastReceiver"
+            android:exported="false" >
+
+            <!--
+                 don't use this - use Context.registerReceiver() <intent-filter> <action
+                android:name="android.media.AUDIO_BECOMING_NOISY" /> </intent-filter>
+            -->
+        </receiver>
+
+        <activity
+            android:name="com.myapp.controller.AboutActivity"
+            android:label="@string/about" />
+        <activity
+            android:name="com.myapp.controller.HighScoreActivity"
+            android:label="@string/high_score" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.com.myapp.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022 Colin Walters.  All rights reserved.
+  -->
+
+<resources>
+    <string name="app_name">Find It</string>
+    <string name="game_over">Game Over</string>
+    <string name="high_score">High Score</string>
+    <string name="help_text">The aim of the game is to find the required colour in the time allotted.\n\nThere are three possible control modes: swipe, tilt and rotate.  The control modes available will depend on your particular device.\n\nIn swipe control mode, move your finger across the screen in a horizontal or vertical direction to move left and right or up and down respectively.  Diagonal movements are also possible.  The direction of the swipe should be as if you are moving the current colour tile rather than the viewpoint.  For example, to move to the next position on the right, swipe right to left.\n\nIn tilt control mode, turn your device in the direction you would like to move – left, right, up or down.  Diagonal movements are also possible.  Keeping your device in a set position moves the viewpoint in that direction again after a short delay.  The position of the device when the game starts determines the tilt origin.\n\nIn rotate control mode, hold your device in a vertical position in front of you whilst pressing play.  Rotate yourself in either a clockwise or anticlockwise direction to display the middle row of colours.  Tilting up or down shows the top and bottom rows respectively.\n\nThe status bar at the top of the screen during the game displays from left to right: the score (the number of colours found), the countdown left to the end of the game, the colour to find and the current viewpoint position in the grid.\n\nWhen you have found the correct colour, tap on it and the next colour to find will be displayed in the status bar.  Selecting the correct colour adds time back onto the counter.  When the countdown finishes, the game is over and your score is the number of colours you have found.\n\nStop and restart the game using the pause and resume options.  The game is paused when leaving the app.  Choose the resume option to restart or the abandon option to exit the game.  If you are in tilt control mode, position the device and select the recalibrate option to reset the tilt origin.</string>
+    <string name="help">Help</string>
+    <string name="application_version_name">1.0</string>
+    <string name="version">Version</string>
+    <string name="copyright">Copyright ©</string>
+    <string name="my_name">Colin Walters</string>
+    <string name="all_rights_reserved">All rights reserved.</string>
+    <string name="about">About</string>
+    <string name="creation_year">2022</string>
+    <string name="resume_game">Resume Game</string>
+    <string name="abandon_game">Abandon Game</string>
+    <string name="game_paused">Game Paused</string>
+    <string name="reset_data">Reset Data</string>
+    <string name="data_has_been_reset">Data has been reset</string>
+    <string name="reset_data_warning">WARNING: All settings will be reset and all high scores will be removed.</string>
+    <string name="data_has_not_been_reset">Data has not been reset</string>
+    <string name="sound_mode_intent_parameter">com.myapp.controller.soundmode</string>
+    <string name="recalibrate">Recalibrate</string>
+    <string name="sound">Sound</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="high_score_intent_parameter">com.myapp.controller.highscore</string>
+    <string name="score">Score</string>
+    <string name="play">Play</string>
+    <string name="controls">Controls</string>
+    <string name="swipe">Swipe</string>
+    <string name="tilt">Tilt</string>
+    <string name="rotate">Rotate</string>
+    <string name="controls_mode_intent_parameter">com.myapp.controller.controlsmode</string>
+    <string name="time">Time</string>
+    <string name="sensor_service_is_not_available">Sensor service is not available.</string>
+    <string name="sensor_is_not_available">Sensor is not available.</string>
+</resources>
