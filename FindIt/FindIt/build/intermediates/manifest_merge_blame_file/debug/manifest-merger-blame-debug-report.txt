@@ -1,5 +1,5 @@
 1<?xml version="1.0" encoding="utf-8"?>
-2<!--   ~ Copyright (c) 2022 Colin Walters.  All rights reserved. -->
+2<!--   ~ Copyright (c) 2023 Colin Walters.  All rights reserved. -->
 3<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 4    package="com.com.myapp"
 5    android:installLocation="preferExternal"
@@ -25,121 +25,116 @@
 18        android:required="true" />
 18-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:15:9-32
 19
-20    <!-- Needed for SensorManager.SENSOR_DELAY_FASTEST -->
-21    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
-21-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:18:5-84
-21-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:18:22-82
-22
-23    <permission
-23-->[androidx.core:core:1.9.0] C:\Users\colin\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-24        android:name="com.com.myapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-24-->[androidx.core:core:1.9.0] C:\Users\colin\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-25        android:protectionLevel="signature" />
-25-->[androidx.core:core:1.9.0] C:\Users\colin\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
-26
-27    <uses-permission android:name="com.com.myapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-27-->[androidx.core:core:1.9.0] C:\Users\colin\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-27-->[androidx.core:core:1.9.0] C:\Users\colin\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-28
-29    <application
-29-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:20:5-63:19
-30        android:allowBackup="true"
-30-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:21:9-35
-31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-31-->[androidx.core:core:1.9.0] C:\Users\colin\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-32        android:debuggable="true"
-33        android:icon="@mipmap/ic_launcher"
-33-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:22:9-43
-34        android:label="@string/app_name"
-34-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:23:9-41
-35        android:roundIcon="@mipmap/ic_launcher_round"
-35-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:24:9-54
-36        android:testOnly="true"
-37        android:theme="@style/AppTheme.NoActionBar" >
-37-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:25:9-52
-38        <activity
-38-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:27:9-35:20
-39            android:name="com.myapp.controller.MainActivity"
-39-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:28:13-61
-40            android:exported="true" >
-40-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:29:13-36
-41            <intent-filter>
-41-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:30:13-34:29
-42                <action android:name="android.intent.action.MAIN" />
-42-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:31:17-68
-42-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:31:25-66
-43
-44                <category android:name="android.intent.category.LAUNCHER" />
-44-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:33:17-76
-44-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:33:27-74
-45            </intent-filter>
-46        </activity>
-47        <activity
-47-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:36:9-39:51
-48            android:name="com.myapp.controller.GameActivity"
-48-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:37:13-61
-49            android:configChanges="orientation"
-49-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:38:13-48
-50            android:screenOrientation="portrait" />
-50-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:39:13-49
-51        <activity
-51-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:40:9-42:43
-52            android:name="com.myapp.controller.HelpActivity"
-52-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:41:13-61
-53            android:label="@string/help" />
-53-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:42:13-41
-54
-55        <service android:name="com.myapp.controller.AudioFocusService" />
-55-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:44:9-73
-55-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:44:18-71
-56
-57        <receiver
-57-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:46:9-54:20
-58            android:name="com.myapp.controller.SoundBroadcastReceiver"
-58-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:47:13-71
-59            android:exported="false" >
-59-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:48:13-37
-60
-61            <!--
-62                 don't use this - use Context.registerReceiver() <intent-filter> <action
-63                android:name="android.media.AUDIO_BECOMING_NOISY" /> </intent-filter>
-64            -->
-65        </receiver>
-66
+20    <permission
+20-->[androidx.core:core:1.10.0] C:\Users\colin\.gradle\caches\transforms-3\e423084ce4314f89f689dfa24616a92b\transformed\core-1.10.0\AndroidManifest.xml:22:5-24:47
+21        android:name="com.com.myapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+21-->[androidx.core:core:1.10.0] C:\Users\colin\.gradle\caches\transforms-3\e423084ce4314f89f689dfa24616a92b\transformed\core-1.10.0\AndroidManifest.xml:23:9-81
+22        android:protectionLevel="signature" />
+22-->[androidx.core:core:1.10.0] C:\Users\colin\.gradle\caches\transforms-3\e423084ce4314f89f689dfa24616a92b\transformed\core-1.10.0\AndroidManifest.xml:24:9-44
+23
+24    <uses-permission android:name="com.com.myapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+24-->[androidx.core:core:1.10.0] C:\Users\colin\.gradle\caches\transforms-3\e423084ce4314f89f689dfa24616a92b\transformed\core-1.10.0\AndroidManifest.xml:26:5-97
+24-->[androidx.core:core:1.10.0] C:\Users\colin\.gradle\caches\transforms-3\e423084ce4314f89f689dfa24616a92b\transformed\core-1.10.0\AndroidManifest.xml:26:22-94
+25
+26    <application
+26-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:17:5-60:19
+27        android:allowBackup="true"
+27-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:18:9-35
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.10.0] C:\Users\colin\.gradle\caches\transforms-3\e423084ce4314f89f689dfa24616a92b\transformed\core-1.10.0\AndroidManifest.xml:28:18-86
+29        android:debuggable="true"
+30        android:icon="@mipmap/ic_launcher"
+30-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:19:9-43
+31        android:label="@string/app_name"
+31-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:20:9-41
+32        android:roundIcon="@mipmap/ic_launcher_round"
+32-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:21:9-54
+33        android:testOnly="true"
+34        android:theme="@style/AppTheme.NoActionBar" >
+34-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:22:9-52
+35        <activity
+35-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:24:9-32:20
+36            android:name="com.myapp.controller.MainActivity"
+36-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:25:13-61
+37            android:exported="true" >
+37-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:26:13-36
+38            <intent-filter>
+38-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:27:13-31:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:28:17-68
+39-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:28:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:30:17-76
+41-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:30:27-74
+42            </intent-filter>
+43        </activity>
+44        <activity
+44-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:33:9-36:51
+45            android:name="com.myapp.controller.GameActivity"
+45-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:34:13-61
+46            android:configChanges="orientation"
+46-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:35:13-48
+47            android:screenOrientation="portrait" />
+47-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:36:13-49
+48        <activity
+48-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:37:9-39:43
+49            android:name="com.myapp.controller.HelpActivity"
+49-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:38:13-61
+50            android:label="@string/help" />
+50-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:39:13-41
+51
+52        <service android:name="com.myapp.controller.AudioFocusService" />
+52-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:41:9-73
+52-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:41:18-71
+53
+54        <receiver
+54-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:43:9-51:20
+55            android:name="com.myapp.controller.SoundBroadcastReceiver"
+55-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:44:13-71
+56            android:exported="false" >
+56-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:45:13-37
+57
+58            <!--
+59                 don't use this - use Context.registerReceiver() <intent-filter> <action
+60                android:name="android.media.AUDIO_BECOMING_NOISY" /> </intent-filter>
+61            -->
+62        </receiver>
+63
+64        <activity
+64-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:53:9-55:44
+65            android:name="com.myapp.controller.AboutActivity"
+65-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:54:13-62
+66            android:label="@string/about" />
+66-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:55:13-42
 67        <activity
-67-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:56:9-58:44
-68            android:name="com.myapp.controller.AboutActivity"
-68-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:57:13-62
-69            android:label="@string/about" />
-69-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:58:13-42
-70        <activity
-70-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:60:9-62:49
-71            android:name="com.myapp.controller.HighScoreActivity"
-71-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:61:13-66
-72            android:label="@string/high_score" />
-72-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:62:13-47
-73
-74        <provider
-74-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-75            android:name="androidx.startup.InitializationProvider"
-75-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-76            android:authorities="com.com.myapp.androidx-startup"
-76-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-77            android:exported="false" >
-77-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+67-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:57:9-59:49
+68            android:name="com.myapp.controller.HighScoreActivity"
+68-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:58:13-66
+69            android:label="@string/high_score" />
+69-->C:\Users\colin\AndroidStudioProjects\FindIt\FindIt\src\main\AndroidManifest.xml:59:13-47
+70
+71        <provider
+71-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\56bd0ce9dedd016b4bf157e0e0dcacd1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+72            android:name="androidx.startup.InitializationProvider"
+72-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\56bd0ce9dedd016b4bf157e0e0dcacd1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+73            android:authorities="com.com.myapp.androidx-startup"
+73-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\56bd0ce9dedd016b4bf157e0e0dcacd1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+74            android:exported="false" >
+74-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\56bd0ce9dedd016b4bf157e0e0dcacd1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+75            <meta-data
+75-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\56bd0ce9dedd016b4bf157e0e0dcacd1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+76                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+76-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\56bd0ce9dedd016b4bf157e0e0dcacd1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+77                android:value="androidx.startup" />
+77-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\56bd0ce9dedd016b4bf157e0e0dcacd1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
 78            <meta-data
-78-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-79                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-79-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+78-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\colin\.gradle\caches\transforms-3\273c9b621c1f8b87e1ee92017ef436f6\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+79                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+79-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\colin\.gradle\caches\transforms-3\273c9b621c1f8b87e1ee92017ef436f6\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
 80                android:value="androidx.startup" />
-80-->[androidx.emoji2:emoji2:1.2.0] C:\Users\colin\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-81            <meta-data
-81-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\colin\.gradle\caches\transforms-3\baa824db3c1bec348e984fa25af19fb7\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-82                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-82-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\colin\.gradle\caches\transforms-3\baa824db3c1bec348e984fa25af19fb7\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-83                android:value="androidx.startup" />
-83-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\colin\.gradle\caches\transforms-3\baa824db3c1bec348e984fa25af19fb7\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-84        </provider>
-85    </application>
-86
-87</manifest>
+80-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\colin\.gradle\caches\transforms-3\273c9b621c1f8b87e1ee92017ef436f6\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+81        </provider>
+82    </application>
+83
+84</manifest>

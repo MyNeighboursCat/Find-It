@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--   ~ Copyright (c) 2022 Colin Walters.  All rights reserved. -->
+<!--   ~ Copyright (c) 2023 Colin Walters.  All rights reserved. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.com.myapp"
     android:installLocation="preferExternal"
@@ -16,9 +16,6 @@
     <uses-feature
         android:name="android.hardware.sensor.accelerometer"
         android:required="true" />
-
-    <!-- Needed for SensorManager.SENSOR_DELAY_FASTEST -->
-    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
 
     <permission
         android:name="com.com.myapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"

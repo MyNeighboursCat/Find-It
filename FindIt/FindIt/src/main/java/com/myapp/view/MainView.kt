@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Colin Walters.  All rights reserved.
+ * Copyright (c) 2023 Colin Walters.  All rights reserved.
  */
 package com.myapp.view
 
@@ -13,7 +13,7 @@ import com.myapp.controller.GameActivity
 
 /**
  * @author Colin Walters
- * @version 1.0, 16/11/2022
+ * @version 1.0, 20/04/2023
  */
 class MainView : SurfaceView, SurfaceHolder.Callback {
     private var gameActivity1: GameActivity? = null

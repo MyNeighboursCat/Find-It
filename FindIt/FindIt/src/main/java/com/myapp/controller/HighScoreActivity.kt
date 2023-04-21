@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Colin Walters.  All rights reserved.
+ * Copyright (c) 2023 Colin Walters.  All rights reserved.
  */
 package com.myapp.controller
 
@@ -14,7 +14,7 @@ import java.util.ArrayList
 
 /**
  * @author Colin Walters
- * @version 1.0, 16/11/2022
+ * @version 1.0, 20/04/2023
  */
 class HighScoreActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

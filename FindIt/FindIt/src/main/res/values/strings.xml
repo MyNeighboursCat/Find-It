@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (c) 2022 Colin Walters.  All rights reserved.
+  ~ Copyright (c) 2023 Colin Walters.  All rights reserved.
   -->
 
 <resources>
@@ -15,7 +15,7 @@
     <string name="my_name">Colin Walters</string>
     <string name="all_rights_reserved">All rights reserved.</string>
     <string name="about">About</string>
-    <string name="creation_year">2022</string>
+    <string name="creation_year">2023</string>
     <string name="resume_game">Resume Game</string>
     <string name="abandon_game">Abandon Game</string>
     <string name="game_paused">Game Paused</string>

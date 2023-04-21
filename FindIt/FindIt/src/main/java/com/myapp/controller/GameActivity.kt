@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Colin Walters.  All rights reserved.
+ * Copyright (c) 2023 Colin Walters.  All rights reserved.
  */
 package com.myapp.controller
 
@@ -32,7 +32,7 @@ import com.myapp.view.MainView
 
 /**
  * @author Colin Walters
- * @version 1.0, 16/11/2022
+ * @version 1.0, 20/04/2023
  */
 class GameActivity : AppCompatActivity() {
     // Make public for handler in FindIt.
@@ -389,7 +389,7 @@ class GameActivity : AppCompatActivity() {
         this.volumeControlStream = AudioManager.STREAM_MUSIC
 
         // hide the title bar
-        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         gameBinding = GameBinding.inflate(this.layoutInflater)
         this.setContentView(gameBinding!!.root)
         statusLinearLayout = gameBinding!!.statusLinearLayout
@@ -471,6 +471,7 @@ class GameActivity : AppCompatActivity() {
         return super.onTouchEvent(event)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         // Don't call super - activity will be destroyed
         // super.onBackPressed();
@@ -652,12 +653,11 @@ class GameActivity : AppCompatActivity() {
                     // Don't use the TYPE_GRAVITY sensor: recalibrate doesn't work sometimes.
                     val sensor1 = sensorManager1!!.getDefaultSensor(sensorType)
                     if (sensor1 != null) {
-                        // Use SENSOR_DELAY_FASTEST and not SENSOR_DELAY_GAME because the rotation
-                        // vector sensor needs this to work properly.
-                        // Needs HIGH_SAMPLING_RATE_SENSORS permission - see AndroidManifest.xml.
+                        /* Note: If SENSOR_DELAY_FASTEST were to be used here it would need the
+                        * HIGH_SAMPLING_RATE_SENSORS permission in the manifest. */
                         sensorManager1!!.registerListener(
                             sensorEventListener1,
-                            sensor1, SensorManager.SENSOR_DELAY_FASTEST
+                            sensor1, SensorManager.SENSOR_DELAY_GAME
                         )
                     } else {
                         val toast = Toast.makeText(
