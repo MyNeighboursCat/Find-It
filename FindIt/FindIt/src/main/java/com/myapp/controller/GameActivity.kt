@@ -17,6 +17,8 @@ import android.view.GestureDetector.SimpleOnGestureListener
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
+import android.window.OnBackInvokedDispatcher
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GestureDetectorCompat
@@ -41,7 +43,6 @@ class GameActivity : AppCompatActivity() {
     private var allowEvents = false
     private var soundMode = false
     private var initialAxesSaved = false
-    private var alertDialogErrorType = 0
     private var controlsMode = 0
     private var touchSlop = 0
     private var minFlingVelocity = 0
@@ -75,7 +76,7 @@ class GameActivity : AppCompatActivity() {
         }
 
         override fun onFling(
-            event1: MotionEvent, event2: MotionEvent,
+            event1: MotionEvent?, event2: MotionEvent,
             velocityX: Float, velocityY: Float
         ): Boolean {
             // Swipe mode.
@@ -375,8 +376,6 @@ class GameActivity : AppCompatActivity() {
                 initialAxesSaved = booleanArray1[0]
                 allowEvents = booleanArray1[1]
             }
-            alertDialogErrorType = savedInstanceState
-                .getInt(GAME_ACTIVITY_BUNDLE + cnt++)
             val floatArray1 = savedInstanceState
                 .getFloatArray(GAME_ACTIVITY_BUNDLE + cnt)
             if (floatArray1 != null) {
@@ -394,7 +393,7 @@ class GameActivity : AppCompatActivity() {
         this.setContentView(gameBinding!!.root)
         statusLinearLayout = gameBinding!!.statusLinearLayout
         gameLinearLayout = gameBinding!!.gameLinearLayout
-        gameBinding!!.pauseImageButton.setOnClickListener { doUserRequestedPaused() }
+        gameBinding!!.pauseImageButton.setOnClickListener { doPausedDialog() }
 
         val window = this.window
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -409,6 +408,19 @@ class GameActivity : AppCompatActivity() {
             window?.setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            this.onBackInvokedDispatcher.registerOnBackInvokedCallback(
+                OnBackInvokedDispatcher.PRIORITY_DEFAULT
+            ) { doPausedDialog() }
+        } else {
+            this.onBackPressedDispatcher.addCallback(this,
+                object : OnBackPressedCallback(true) {
+                    override fun handleOnBackPressed() {
+                        doPausedDialog()
+                    }
+                })
         }
     }
 
@@ -471,15 +483,6 @@ class GameActivity : AppCompatActivity() {
         return super.onTouchEvent(event)
     }
 
-    @Deprecated("Deprecated in Java")
-    override fun onBackPressed() {
-        // Don't call super - activity will be destroyed
-        // super.onBackPressed();
-        if (allowEvents) {
-            doUserRequestedPaused()
-        }
-    }
-
     override fun onSaveInstanceState(outState: Bundle) {
         if (game1 != null) {
             if (!game1!!.isPaused) {
@@ -495,7 +498,6 @@ class GameActivity : AppCompatActivity() {
 
         var cnt = 0
         outState.putBooleanArray(GAME_ACTIVITY_BUNDLE + cnt++, booleanArray1)
-        outState.putInt(GAME_ACTIVITY_BUNDLE + cnt++, alertDialogErrorType)
         outState.putFloatArray(GAME_ACTIVITY_BUNDLE + cnt, floatArray1)
 
         // do this last like book\online code
@@ -525,12 +527,6 @@ class GameActivity : AppCompatActivity() {
 
     fun setAllowEvents(allowEvents: Boolean) {
         this.allowEvents = allowEvents
-    }
-
-    private fun doUserRequestedPaused() {
-        // Pause or back button pressed.
-        alertDialogErrorType = 0
-        doPausedDialog()
     }
 
     private fun doPausedDialog() {

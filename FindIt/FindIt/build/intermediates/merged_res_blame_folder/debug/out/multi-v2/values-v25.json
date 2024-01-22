@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.myapp.FindIt-mergeDebugResources-26:/values-v25/values-v25.xml",
+            "outputFile": "com.myapp.FindIt-mergeDebugResources-29:/values-v25/values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\colin\\.gradle\\caches\\transforms-3\\1863ac33a918a53d8aa9794769dfa1b6\\transformed\\appcompat-1.6.1\\res\\values-v25\\values-v25.xml",
+                    "source": "C:\\Users\\colin\\.gradle\\caches\\transforms-3\\e742929aa2d0066c9e23d8a77ceb0a3d\\transformed\\appcompat-1.6.1\\res\\values-v25\\values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

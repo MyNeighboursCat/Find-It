@@ -1,26 +1,26 @@
 [
     {
-        "merged": "com.myapp.FindIt-mergeDebugResources-27:/layout/game_paused_swipe_or_rotate_dialog.xml",
-        "source": "com.myapp.FindIt-main-30:/layout/game_paused_swipe_or_rotate_dialog.xml"
+        "merged": "com.myapp.FindIt-mergeDebugResources-30:/layout/text_display.xml",
+        "source": "com.myapp.FindIt-main-33:/layout/text_display.xml"
     },
     {
-        "merged": "com.myapp.FindIt-mergeDebugResources-27:/layout/list_display.xml",
-        "source": "com.myapp.FindIt-main-30:/layout/list_display.xml"
+        "merged": "com.myapp.FindIt-mergeDebugResources-30:/layout/game_paused_swipe_or_rotate_dialog.xml",
+        "source": "com.myapp.FindIt-main-33:/layout/game_paused_swipe_or_rotate_dialog.xml"
     },
     {
-        "merged": "com.myapp.FindIt-mergeDebugResources-27:/layout/text_display.xml",
-        "source": "com.myapp.FindIt-main-30:/layout/text_display.xml"
+        "merged": "com.myapp.FindIt-mergeDebugResources-30:/layout/list_display.xml",
+        "source": "com.myapp.FindIt-main-33:/layout/list_display.xml"
     },
     {
-        "merged": "com.myapp.FindIt-mergeDebugResources-27:/layout/game_paused_tilt_dialog.xml",
-        "source": "com.myapp.FindIt-main-30:/layout/game_paused_tilt_dialog.xml"
+        "merged": "com.myapp.FindIt-mergeDebugResources-30:/layout/game.xml",
+        "source": "com.myapp.FindIt-main-33:/layout/game.xml"
     },
     {
-        "merged": "com.myapp.FindIt-mergeDebugResources-27:/layout/game.xml",
-        "source": "com.myapp.FindIt-main-30:/layout/game.xml"
+        "merged": "com.myapp.FindIt-mergeDebugResources-30:/layout/main.xml",
+        "source": "com.myapp.FindIt-main-33:/layout/main.xml"
     },
     {
-        "merged": "com.myapp.FindIt-mergeDebugResources-27:/layout/main.xml",
-        "source": "com.myapp.FindIt-main-30:/layout/main.xml"
+        "merged": "com.myapp.FindIt-mergeDebugResources-30:/layout/game_paused_tilt_dialog.xml",
+        "source": "com.myapp.FindIt-main-33:/layout/game_paused_tilt_dialog.xml"
     }
 ]

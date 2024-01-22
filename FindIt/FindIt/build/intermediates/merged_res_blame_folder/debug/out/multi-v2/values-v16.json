@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.myapp.FindIt-mergeDebugResources-26:/values-v16/values-v16.xml",
+            "outputFile": "com.myapp.FindIt-mergeDebugResources-29:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\colin\\.gradle\\caches\\transforms-3\\e423084ce4314f89f689dfa24616a92b\\transformed\\core-1.10.0\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\colin\\.gradle\\caches\\transforms-3\\1863ac33a918a53d8aa9794769dfa1b6\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\colin\\.gradle\\caches\\transforms-3\\e742929aa2d0066c9e23d8a77ceb0a3d\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\colin\\.gradle\\caches\\transforms-3\\1410d8a9fcd8237e6a8194b44e06f3c2\\transformed\\core-1.12.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]
